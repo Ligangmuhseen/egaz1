@@ -1,0 +1,20 @@
+.container-table {
+    padding: 30px;
+}
+
+.container-profile {
+    padding: 40px;
+}
+
+
+.searchbar {
+    position: absolute;
+    top: -135px;
+    right: 50px;
+
+}
+
+.mailbadge {
+    position: relative;
+    left: 1100px;
+}

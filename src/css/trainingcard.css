@@ -1,0 +1,261 @@
+body {  
+    color:var(--cui-card-color);
+    font-family:var(--cui-body-font-family);
+    font-size:var(--cui-body-font-size);
+    font-weight:var(--cui-body-font-weight);
+    line-height:var(--cui-body-line-height);
+    text-align:var(--cui-body-text-align);
+  }  
+body { 
+/* CSS Variables that may have been missed get put on body */ 
+    --cui-card-spacer-y:  1rem;  
+    --cui-card-spacer-x:  1rem;  
+    --cui-card-title-spacer-y:  0.5rem;  
+    --cui-card-border-width:  1px;  
+    --cui-border-color-translucent: rgba(0, 0, 21, 0.175); 
+    --cui-card-border-color:  var(--cui-border-color-translucent);  
+    --cui-card-border-radius:  0.375rem;  
+    --cui-card-inner-border-radius:  calc(0.375rem - 1px);  
+    --cui-card-color:  unset;  
+    --cui-card-bg:  #fff;  
+    --cui-sidebar-occupy-start:  16rem; 
+    --cui-list-group-color:  unset;  
+    --cui-list-group-bg:  #fff;  
+    --cui-list-group-border-color:  rgba(0, 0, 21, 0.125);  
+    --cui-list-group-border-width:  1px;  
+    --cui-list-group-border-radius:  0.375rem;  
+    --cui-list-group-item-padding-x:  1rem;  
+    --cui-list-group-item-padding-y:  0.5rem;  
+} 
+
+* { 
+    box-sizing: border-box;
+} 
+
+.example:not(:first-child) { 
+    margin-top: 1.5rem;
+} 
+
+.card-body { 
+    flex: 1 1 auto; 
+    padding: var(--cui-card-spacer-y) var(--cui-card-spacer-x); 
+    color: var(--cui-card-color);
+} 
+
+.card { 
+    --cui-card-spacer-y: 1rem; 
+    --cui-card-spacer-x: 1rem; 
+    --cui-card-title-spacer-y: 0.5rem; 
+    --cui-card-border-width: 1px; 
+    --cui-card-border-color: var(--cui-border-color-translucent); 
+    --cui-card-border-radius: 0.375rem; 
+    --cui-card-inner-border-radius: calc(0.375rem - 1px); 
+    --cui-card-color: unset; 
+    --cui-card-bg: #fff; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    min-width: 0; 
+    height: var(--cui-card-height); 
+    word-wrap: break-word; 
+    background-color: var(--cui-card-bg); 
+    background-clip: border-box; 
+    border: var(--cui-card-border-width) solid var(--cui-card-border-color); 
+    border-radius: var(--cui-card-border-radius);
+} 
+
+.sidebar:not(.sidebar-end) ~ *  { 
+    --cui-sidebar-occupy-start: 16rem;
+} 
+
+html:not([dir="rtl"]) .wrapper { 
+    padding-left: var(--cui-sidebar-occupy-start, 0);
+} 
+
+body { 
+    margin: 0; 
+    font-family: var(--cui-body-font-family); 
+    font-size: var(--cui-body-font-size); 
+    font-weight: var(--cui-body-font-weight); 
+    line-height: var(--cui-body-line-height); 
+    color: var(--cui-body-color); 
+    text-align: var(--cui-body-text-align); 
+    background-color: var(--cui-body-bg); 
+    -webkit-text-size-adjust: 100%; 
+    -webkit-tap-highlight-color: rgba(0, 0, 21, 0);
+} 
+
+:root { 
+    --cui-light-rgb: 235, 237, 239; 
+    --cui-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+    --cui-body-font-family: var(--cui-font-sans-serif); 
+    --cui-body-font-size: 1rem; 
+    --cui-body-font-weight: 400; 
+    --cui-body-line-height: 1.5; 
+    --cui-body-color: rgba(44, 56, 74, 0.95); 
+    --cui-body-bg: #fff; 
+    --cui-border-color-translucent: rgba(0, 0, 21, 0.175); 
+    --cui-border-radius: 0.375rem; 
+    --cui-heading-color: unset; 
+    --cui-link-color: #321fdb; 
+    --cui-link-hover-color: #2819af; 
+} 
+
+@media (prefers-reduced-motion: no-preference){ 
+  :root { 
+    scroll-behavior: smooth;
+  } 
+}     
+
+:last-child  { 
+    margin-bottom: 0;
+} 
+
+*,:before,:after { 
+    box-sizing: border-box;
+} 
+
+img { 
+    vertical-align: middle;
+} 
+
+.card-img-top { 
+    width: 100%;
+} 
+
+.card-img-top { 
+    border-top-left-radius: var(--cui-card-inner-border-radius); 
+    border-top-right-radius: var(--cui-card-inner-border-radius);
+} 
+
+ul { 
+    margin-top: 0; 
+    margin-bottom: 1rem;
+} 
+
+.list-group { 
+    --cui-list-group-color: unset; 
+    --cui-list-group-bg: #fff; 
+    --cui-list-group-border-color: rgba(0, 0, 21, 0.125); 
+    --cui-list-group-border-width: 1px; 
+    --cui-list-group-border-radius: 0.375rem; 
+    --cui-list-group-item-padding-x: 1rem; 
+    --cui-list-group-item-padding-y: 0.5rem; 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 0; 
+    border-radius: var(--cui-list-group-border-radius);
+} 
+
+.list-group-flush { 
+    border-radius: 0;
+} 
+
+.card > .list-group  { 
+    border-top: inherit; 
+    border-bottom: inherit;
+} 
+
+html:not([dir="rtl"]) .list-group  { 
+    padding-left: 0;
+} 
+
+h5 { 
+    margin-top: 0; 
+    margin-bottom: 0.5rem; 
+    font-weight: 500; 
+    line-height: 1.2; 
+    color: var(--cui-heading-color);
+} 
+
+h5 { 
+    font-size: 1.25rem;
+} 
+
+.card-title { 
+    margin-bottom: var(--cui-card-title-spacer-y);
+} 
+
+p { 
+    margin-top: 0; 
+    margin-bottom: 1rem;
+} 
+
+.card-text:last-child { 
+    margin-bottom: 0;
+} 
+
+.list-group-item { 
+    position: relative; 
+    display: block; 
+    padding: var(--cui-list-group-item-padding-y) var(--cui-list-group-item-padding-x); 
+    color: var(--cui-list-group-color); 
+    text-decoration: none; 
+    background-color: var(--cui-list-group-bg); 
+    border: var(--cui-list-group-border-width) solid var(--cui-list-group-border-color);
+} 
+
+.list-group-item:first-child { 
+    border-top-left-radius: inherit; 
+    border-top-right-radius: inherit;
+} 
+
+.list-group-flush > .list-group-item  { 
+    border-width: 0 0 var(--cui-list-group-border-width);
+} 
+
+.list-group-item + .list-group-item  { 
+    border-top-width: 0;
+} 
+
+.list-group-item:last-child { 
+    border-bottom-right-radius: inherit; 
+    border-bottom-left-radius: inherit;
+} 
+
+.list-group-flush > .list-group-item:last-child  { 
+    border-bottom-width: 0;
+} 
+
+a { 
+    color: var(--cui-link-color); 
+    text-decoration: underline;
+} 
+
+a:hover { 
+    color: var(--cui-link-hover-color);
+} 
+
+html:not([dir="rtl"]) .card-link + .card-link  { 
+    margin-left: var(--cui-card-spacer-x);
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-lalZt.style-lalZt {  
+   width: 18rem;  
+}  
+
+
+.singletrainingcard {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    margin: 15px;
+    
+  }
+
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 900px) {
+    .singletrainingcard {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .singletrainingcard {
+      width: 100%;
+    }
+  }
